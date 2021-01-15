@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Log In</title>
+    <link rel="stylesheet" href="formdaftar.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="title">
+                <h1 style="font-weight: 400;"><strong>Jember Berkebun</h1>
+            </div>
+            <div class="navigation">
+                <a class="button button-white" href="index.html">Beranda</a>
+                <a href="metode tanam.html">Metode</a>
+                <a href="jenis.html">Jenis</a>
+                <a href="manfaat.html">Manfaat</a>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+    <div class="daftar">
+        <form name="biodata" method="POST" >
+            <pre>
+            <div class="form">
+                <h1>Daftar Event</h1>
+                Username         <input id="username" placeholder="Enter Username" type="text" name="username">
+                Password          <input id="password" placeholder="Enter Password" type="password" name="password">
+                <center>
+                    <a href="Daftar Berhasil.html"> <button  class="button" data-toggle="modal" type="button" onclick="validate()">Log In</button> </a></a></a>
+                </center>
+            </pre>
+            </div>
+        </form>
+    </div>
+    
+    <div class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <center>
+                        <h2> Segera Diproses!</h2>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        (c) copyright 2020 by Jember Berkebun
+    </div>
+
+    <script>
+        var Login = document.getElementsByClassName('button');
+
+        function validate() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            let merah = document.querySelector('.merah');
+                let button = document.querySelector('button[data-toggle = "modal"]');
+                let modal = document.querySelector('.modal');
+        
+
+                modal.classList.add('show');
+
+                modal.addEventListener('click', function(){
+                    this.classList.remove('show');
+                }
+                );
+
+                modal.querySelector('.modal-content').addEventListener ('click', function() {
+                    e.stopPropragation();
+                }
+                );
+        }
+    </script>
+</body>
+</html>
